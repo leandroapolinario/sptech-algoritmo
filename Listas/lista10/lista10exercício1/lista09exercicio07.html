@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva o 7!</title>
+</head>
+
+<body>
+    <p>Informe um número entre 0 e 200</p>
+    <input type="number" id="input_num">
+    <button onclick="contar()">Viva o 7!</button>
+    <p id="p_mensagem"></p>
+
+</body>
+
+</html>
+<script>
+
+    function contar() {
+
+        var numero = Number(input_num.value);
+        
+        if(numero >= 0 && numero <= 200){
+
+        for (var contador = 0; contador <= numero; contador++) {
+
+            if (contador % 7 == 0) {
+
+                p_mensagem.innerHTML += `${contador}<br>`
+
+            } else {
+
+                p_mensagem.innerHTML += ``
+
+            }          
+        }
+    } else{
+        alert(`Insira um número entre 0 e 200 `)
+    }
+    }
+
+</script>
