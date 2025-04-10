@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 01 - Exercício 1</title>
+</head>
+<body>
+    
+    <h1>Lista 01 - Exercício 1</h1>
+
+    <h2>Informe sua cidade natal</h2>
+
+    <input id="input_birthCity" type="text">
+
+    <h2>Informe seu ano de nascimento</h2>
+
+    <input id="input_birthYear" type="text">
+
+    <br><br>
+
+    <button onclick="cadastrar()"> Cadastrar </button>
+
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+
+        alert(`Você nasceu em ${input_birthCity.value} em ${input_birthYear.value}`)
+
+    }
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família</title>
+</head>
+<body>
+    <p>Quantos filhos você tem?</p>
+    <input type="number" id="input_qtdFilhos">
+    <br><br>
+    <button onclick="familia()">Analisar família</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+
+</body>
+</html>
+<script>
+    function familia(){
+        var qtdFilhos = Number(input_qtdFilhos.value);
+            if(qtdFilhos >= 1) {
+                p_mensagem.innerHTML = `Não tem TV`
+            }
+            if(qtdFilhos >= 2) {
+                p_mensagem.innerHTML += `<br><br> Não tem internet`
+            }
+            if(qtdFilhos >= 3) {
+                p_mensagem.innerHTML += `<br><br> Não tem video game`
+            }
+            if(qtdFilhos >= 4) {
+                p_mensagem.innerHTML += `<br><br> Não tem Netflix`
+            }
+
+    }
+</script>

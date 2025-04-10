@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase numerada</title>
+</head>
+<body>
+    
+    <button onclick="contar()">Diga algo sobre a matéria de Algoritmos</button>
+    <p id="p_mensagem"></p>
+
+</body>
+</html>
+<script>
+
+    function contar() {
+
+        var contador = 0
+
+        while (contador < 7) {
+
+            contador ++
+            p_mensagem.innerHTML += `${contador}. Melhor matéria!<br>`
+            
+        }
+
+    }
+    
+</script>

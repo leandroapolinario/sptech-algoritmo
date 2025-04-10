@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um elefante, incomoda muita gente...</title>
+</head>
+<body>
+
+    Inserir o número de elefantes<br>
+    <input type="text" id="input_numero"><br>
+
+    <button onclick="analisar()">Atazanar a médium</button>
+
+    <div id="div_mensagem"></div>
+
+    
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var numero = Number(input_numero.value);
+        var ElefantesIncomodam = "incomodam, ";
+        var contador = 1;
+        div_mensagem.innerHTML = ""
+
+        if (numero ==1){
+            div_mensagem.innerHTML = `1 elefante incomoda muita gente`
+        }
+
+        else {
+
+
+        while (contador <= numero){
+            contador++;
+            ElefantesIncomodam += "incomodam, ";
+            div_mensagem.innerHTML += `1 elefante incomoda muita gente.<br>
+            ${contador} elefantes ${ElefantesIncomodam} muito mais<br>`;
+        
+        
+            }
+
+        }        
+
+
+
+
+
+    }
+</script>

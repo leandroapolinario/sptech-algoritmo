@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolates</title>
+</head>
+<body>
+    <p>Quantos chocolates foram comprados?</p>
+    <input type="number" id="input_qtdChocolates">
+    <br><br>
+    <button onclick="chocolate()">Compra</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+    function chocolate(){
+        var quantidade = Number(input_qtdChocolates.value);
+        var valor = quantidade * 3;
+        var valorDesc = quantidade * 2.5; 
+
+        if (quantidade >= 12) {
+            p_mensagem.innerHTML = `O valor da sua compra foi de R$${valorDesc}!`
+        } else {
+            p_mensagem.innerHTML = `O valor da sua compra foi de R$${valor}!`
+        }
+    }
+</script>

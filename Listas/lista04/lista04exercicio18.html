@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+
+    <p>Informe a nota 1</p>
+    <input type="number" id="input_n1">
+    <br><br>
+    <p>Informe  nota 2</p>
+    <input type="number" id="input_n2">
+    <br><br>
+    <button onclick="nota()">Verificar situação</button>
+
+</body>
+</html>
+<script>
+    function nota() {
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value);
+
+        var media = (n1 + n2)/ 2
+
+        if(media >= 6) {
+            alert(`Parabéns, aprovado!`)
+        } else {
+            alert(`Tente outra vez...`)
+        }
+    }
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É tri/penta!</title>
+</head>
+<body>
+
+    Insira um número<br>
+    <input type="text" id="input_numero1"><br>
+
+    Insira um segundo número crescente<br>
+    <input type="text" id="input_numero2"><br>
+
+    <button onclick="analisar()">Curto 3 e 5!</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+
+<script>
+    function analisar(){
+        var inicial = Number(input_numero1.value);
+        var final = Number(input_numero2.value);
+        var contador = inicial;
+        var resultado = "";
+        var texto = "";
+        
+             if (inicial >= final) {
+            alert("Por favor, insira um intervalo válido.");
+        
+        }
+
+
+        
+    
+       while (contador <= final) {
+           
+           
+           if (contador % 3 == 0 && contador % 5 == 0) {
+               texto = `É TRI!É PENTA!`;
+            } else if (contador % 3 == 0) {
+                texto = `É TRI!`;
+            } else if (contador % 5 == 0) {
+                texto = `É PENTA!`;
+            } else {
+                texto = contador;
+            }
+            
+            contador++;
+            resultado += `<b>${texto}<br></b>`;
+        }
+        
+        
+        div_mensagem.innerHTML = resultado;
+    }
+
+</script>

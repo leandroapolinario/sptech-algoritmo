@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestibular</title>
+</head>
+<body>
+    Qual a sua nota do ENEM??
+    <input type="number" id="input_notaEnem">
+    <br><br>
+    Qual a sua nota do vestibular interno?
+    <input type="number" id="input_notaVestibular">
+    <br><br>
+    <button onclick="vestibular()">Avaliação</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function vestibular() {
+        var notaEnem = Number(input_notaEnem.value);
+        var notaVestibular = Number(input_notaVestibular.value);
+
+
+        if (notaEnem >= 800 || notaVestibular >= 700) {
+            p_mensagem.innerHTML = `Parabéns! Aprovado`
+        } else {
+            p_mensagem.innerHTML = `Tente semestre que vem!`
+        }
+
+    }
+</script>

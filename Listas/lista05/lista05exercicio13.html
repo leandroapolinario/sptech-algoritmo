@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body>
+
+    <p>Qual pokemon inicial você escolheria?</p>
+    <input type="text" id="input_pokemon"><br><br>
+    <button onclick="pokemon()">Escolher pokemon</button><br><br>
+    <p id="p_mensagem"></p>
+    <img src="" alt="">
+    
+</body>
+</html>
+<script>
+    function pokemon() {
+        
+        var pokemon = input_pokemon.value;
+
+        if (pokemon == 'Bulbasaur') {
+            p_mensagem.innerHTML = `<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" alt="">`
+        } else if (pokemon == 'Charmander') {
+            p_mensagem.innerHTML = `<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/004.png" alt="">`
+        } else if (pokemon == 'Squirtle') {
+            p_mensagem.innerHTML = `<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png" alt="">`
+        } else {
+            alert(`Pokemon não reconhecido!`)
+        }
+}
+</script>

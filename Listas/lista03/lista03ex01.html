@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Aposentadoria</title>
+</head>
+<body>
+    
+    <h3>Qual a sua idade?</h3>
+    <input id="input_idade" type="number">
+
+    <button onclick="aposentadoriaH()">Aposentadoria Homem</button>
+    <button onclick="aposentadoriaM()">Aposentadoria Mulher</button>
+
+
+</body>
+</html>
+
+<script>
+
+    function aposentadoriaH() {
+
+        var idade = Number(input_idade.value);
+        var idadeAposentadoria = 70;
+        var faltaAposentar = idadeAposentadoria-idade;
+
+        alert('Falta(m) ' + faltaAposentar + ' anos para sua aposentadoria.');
+
+    }
+
+    function aposentadoriaM() {
+
+        var idade = Number(input_idade.value);
+        var idadeAposentadoria = 65;
+        var faltaAposentar = idadeAposentadoria - idade;
+
+        alert('Falta(m) ' + faltaAposentar + ' anos para sua aposentadoria.');
+
+    }
+</script>

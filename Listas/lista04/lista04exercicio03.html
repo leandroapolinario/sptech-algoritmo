@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <p>Informe a nota 1:</p>
+    <input type="text" id="input_nota1">
+    <br><br>
+    <p>Informe a nota 2:</p>
+    <input type="text" id="input_nota2">
+    <br><br>
+    <p>Informe a nota 3:</p>
+    <input type="text" id="input_nota3">
+    <br><br>
+    <button onclick="desempenho()">Analisar desempenho</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+
+    function desempenho(){
+        var n1 = Number( input_nota1.value )
+        var n2 = Number( input_nota2.value )
+        var n3 = Number( input_nota3.value )        
+
+        var media = ( n1 + n2 + n3 ) / 3
+
+        if( media >= 9.4 ) {
+
+            p_mensagem.innerHTML = `Sua média foi de ${media}. Parabéns, você é fora de série!`
+
+        } else {
+
+           p_mensagem.innerHTML = `Sua média foi de ${media}.`
+        }
+
+    }
+</script>

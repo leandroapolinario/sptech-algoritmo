@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umidade</title>
+</head>
+<body>
+
+    <p>Informe a umidade (%)</p>
+    <input type="number" id="input_umidade"><br><br>
+    <button onclick="umidade()">Cálculo Umidade</button><br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+    function umidade() {
+        var umidade = Number(input_umidade.value);
+
+        if (umidade < 0) {
+            alert('Valor informado fora do limite permitido.')
+        } else if (umidade < 12) {
+            p_mensagem.innerHTML = `Estado de Emergencia`
+        } else if (umidade <= 20) {
+            p_mensagem.innerHTML = `Estado de alerta`
+        } else if (umidade <= 30) {
+            p_mensagem.innerHTML = `Estado de atenção`
+        } else if (umidade <= 100) {
+            p_mensagem.innerHTML = `Nenhum risco`            
+        } else {
+            alert(`Valor informado fora do limite permitido.`)
+    }
+}
+</script>

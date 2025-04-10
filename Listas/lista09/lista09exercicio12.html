@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressar amor</title>
+</head>
+<body>
+
+    Inserir o nome da pessoa que o usuário mais ama na vida<br>
+    <input type="text" id="input_nomeAmor"><br>
+
+    Inserir o quanto o usuário a ama (um número inteiro)<br>
+    <input type="text" id="input_numero"><br>
+
+    <button onclick="analisar()">Expressar amor</button>
+
+    <div id="div_mensagem"></div>
+
+    
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var pessoa = input_nomeAmor.value;
+        var numero = Number(input_numero.value);
+
+        contador = 0;
+        div_mensagem.innerHTML = ""
+
+        while (contador < numero){
+            contador++;
+            div_mensagem.innerHTML += `${pessoa}, eu te amo! Sempre lembre disso!<br>`
+
+        }
+
+
+
+
+
+    }
+</script>

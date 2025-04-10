@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+
+    <p>Para qual time você torce?</p>
+    <input type="text" id="input_time"><br><br>
+    <button onclick="time()">Fale sobre esse time</button><br><br>
+    
+</body>
+</html>
+<script>
+    function time() {
+        var time = input_time.value;
+
+        if (time == "Corinthians") {
+            p_mensagem.innerHTML = `<p style="color: white; background-color: black " >Salve o Corinthians</p>`
+        } else if (time == "Palmeiras") {
+            p_mensagem.innerHTML = `<p style="color: white; background-color: green" >Salve o alviverde imponente</p>`
+        } else if (time == "Santos") {
+            p_mensagem.innerHTML = `<p>Agora quem dá a bola é o Santos</p>`
+        } else {
+            p_mensagem.innerHTML = `<p style="color: red; background-color: black" >Salve o Tricolor paulista</p>`
+    }
+}
+</script>

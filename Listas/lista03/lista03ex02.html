@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Pizza</title>
+</head>
+<body>
+
+    <h3>Qual o valor da pizza?</h3>
+    <input id="input_valorPizza" type="text">
+
+    <h3>Quantos amigos vão dividir?</h3>
+    <input id="input_qtdAmigos" type="text">
+
+    <br><br>
+
+    <button onclick="calculoPizza()">#lovePizza</button>
+    
+</body>
+</html>
+
+<script>
+
+    function calculoPizza() {
+
+        var valor = Number(input_valorPizza.value);
+        var qtdAmigos = Number(input_qtdAmigos.value);
+        var valorPorPessoa = valor/qtdAmigos;
+
+        alert('Cada um dos ' + qtdAmigos + ' amigos vai pagar R$' + valorPorPessoa + '.');
+
+    }
+
+
+</script>

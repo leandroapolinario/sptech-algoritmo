@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    <p>Qual a temperatura do ambiente?</p>
+    <input type="number" id="input_temperatura">
+    <br><br>
+    <button onclick="temperatura()">Verificar clima</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    <p id="p_imagem"></p>
+
+<img src="" alt="">
+
+</body>
+</html>
+<script>
+    function temperatura(){
+        var temperatura = Number(input_temperatura.value);
+
+        if (temperatura < 10) {
+            p_mensagem.innerHTML = `A temperatura é adequada para conservação de alimentos!`
+            p_imagem.innerHTML = `<img src="https://www.iped.com.br/_upload/content/2015/03/03/identificar-alimentos-bom-estado.jpg" alt="">`
+        } else {
+            p_mensagem.innerHTML = `A temperatura não é adequada para conservação de alimentos!`
+            p_imagem.innerHTML = `<img src="https://image.tuasaude.com/media/article/ed/zg/como-identificar-alimentos-estragados_22594.jpg?width=686&height=487" alt="">`
+        }
+    }
+</script>

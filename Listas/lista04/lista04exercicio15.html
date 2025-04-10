@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo</title>
+</head>
+<body>
+    <p>Informe o saldo da conta</p>
+    <input type="number" id="input_saldo">
+    <br><br>
+
+    <p>Informe o valor a debitar da conta</p>
+    <input type="number" id="input_debito">
+    <br><br>
+
+    <button onclick="saldo()">Analisar conta</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function saldo(){
+        var saldo = Number(input_saldo.value);
+        var debito = Number(input_debito.value);
+
+        var saldo = saldo - debito;
+
+        if (saldo >= 0){
+            p_mensagem.innerHTML = `<i style ="color: blue"> O saldo atual da conta corrente é R$${saldo}. </i>`
+        } else {
+            p_mensagem.innerHTML = `<b style ="color: red"> O saldo atual da conta corrente é R$${saldo}. </b>`
+        }
+
+
+
+    }
+</script>

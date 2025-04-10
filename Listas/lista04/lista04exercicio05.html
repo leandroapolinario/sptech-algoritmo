@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta de luz</title>
+</head>
+<body>
+    <p>Qual a quantidade de KWh consumida no mês?</p>
+    <input type="number" id="input_KWh">
+    <br><br>
+    <button onclick="contaLuz()">Cacular conta de luz</button>
+    <br><br>
+
+
+</body>
+</html>
+<script>
+    function contaLuz(){
+        var qtdKWh = Number(input_KWh.value);
+
+        var conta = qtdKWh * 0.85
+
+        if( qtdKWh < 100 ){
+            conta = conta * 0.9;
+        }
+
+        alert(`O valor da conta é R$${conta}.`)
+
+    }
+</script>

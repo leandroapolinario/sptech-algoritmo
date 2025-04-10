@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renda</title>
+</head>
+<body>
+    Qual a forma de pagamento?
+    <select name="" id="select_formaPgto">
+
+        <option>Dinheiro</option>
+        <option>Cartão de débito</option>
+        <option>Cartão de crédito</option>
+        <option>Boleto</option>
+
+    </select>
+    <br><br>
+    <button onclick="compra()">Analisar compra</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function compra() {
+        var formaPgto = select_formaPgto.value;
+
+
+        if (formaPgto == "Dinheiro" || formaPgto == "Cartão de débito") {
+            p_mensagem.innerHTML = `Você terá que pagar a vista`
+        } else {
+            p_mensagem.innerHTML = `Pagamento poderá ser parcelado`
+        }
+    }
+</script>

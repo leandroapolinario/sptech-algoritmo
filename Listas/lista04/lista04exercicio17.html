@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência</title>
+</head>
+<body>
+    
+    <p>Qual a frequência do aluno?</p>
+    <input type="number" id="input_frequencia">
+    <br><br>
+    <button onclick="frequencia()">Analisar frequência</button>
+    <br><br>
+    <p id="p_imagem"></p>
+    <img src="" alt="">
+
+</body>
+</html>
+<script>
+
+function frequencia() {
+
+    var frequencia = Number(input_frequencia.value);
+
+    if (frequencia < 50) {
+
+        p_imagem.innerHTML = `<img src="https://blog.webcontinental.com.br/wp-content/uploads/2023/06/turismo.jpg" alt="">`
+    } else {
+        p_imagem.innerHTML = `<img src="https://static6.depositphotos.com/1034614/595/i/450/depositphotos_5959263-stock-photo-young-man-holding-stack-of.jpg" alt="">`
+    }
+}
+
+</script>

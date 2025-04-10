@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigerante</title>
+</head>
+<body>
+    <p>Quantas latinhas você bebe por dia?</p>
+    <input type="number" id="input_quantidade">
+    <br><br>
+    <button onclick="refrigerante()">Quantos refris?</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    
+    function refrigerante(){
+    
+    var qtdRefrisDia = Number(input_quantidade.value);
+    var refrisAno = qtdRefrisDia * 365;
+
+    if(refrisAno >= 500){
+        p_mensagem.innerHTML = `Você consome ${refrisAno} refrigerantes por ano. Cuidado com a diabetes!`
+    } else{
+        p_mensagem.innerHTML = `Você consome ${refrisAno} refrigerantes por ano.`
+    }
+
+    }
+
+    
+</script>

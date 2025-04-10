@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de cansaço do aluno SPTech</title>
+</head>
+<body>
+
+    <p>Qual a marca da TV?</p>
+    <select name="" id="select_marca">
+
+        <option>Samsung</option>
+        <option>LG</option>
+        <option>Mondial</option>
+        <option>Britânia</option>
+
+    </select>
+    <br><br>
+    <p>Qual o preço da TV?</p>
+    <input type="text" id="input_preco">
+    <br><br>
+    <button onclick="compra()">Analisar compra</button>
+    <p id="p_mensagem"></p>
+    <p id="p_mensagem2"></p>
+
+</body>
+</html> 
+<script>
+    function compra() {
+
+        var marca = select_marca.value;
+        var preco = Number(input_preco.value);
+        
+
+        if (preco < 800 || preco > 2000) {
+            p_mensagem.innerHTML = `TV fora da faixa de preço`;
+
+            if(preco < 800) {
+                p_mensagem2.innerHTML = `Preço baixo demais!`;
+            } else {
+                p_mensagem2.innerHTML = `TV cara demais, infelizmente`
+            }
+
+        } else {
+            if (marca == `Mondial` || marca == `Britânia`) {
+                p_mensagem.innerHTML = `Na faixa de preço, porém marca não confiável.`
+            } else {
+                p_mensagem.innerHTML = `Essa TV pode entrar na sua lista!`
+            }
+        }
+
+    }
+</script>

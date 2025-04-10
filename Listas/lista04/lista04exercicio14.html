@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola</title>
+</head>
+<body>
+    <p>Qual seu nome?</p>
+    <input type="text" id="input_nome">
+    <br><br>
+    <p>Qual sua idade?</p>
+    <input type="number" id="input_idade">
+    <br><br>
+    <button onclick="avaliar()">Avaliar aluno</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+    function avaliar() {
+        var nome = input_nome.value;
+        var idade = Number(input_idade.value);
+
+        if(idade >= 18){
+            p_mensagem.innerHTML = `${nome}, vamos tirar a CNH?`
+        } else {
+            p_mensagem.innerHTML = `${nome}, vai jogar Playstation!`
+        }
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humor</title>
+</head>
+<body>
+
+    <p>Como você está se sentindo?</p>
+    <input type="text" id="input_humor"><br><br>
+    <button onclick="humor()">Mostrar humor</button><br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+    function humor() {
+        var humor = input_humor.value;
+
+        if (humor == 'Feliz') {
+            p_mensagem.innerHTML = `😊`
+        } else if (humor == 'Triste') {
+            p_mensagem.innerHTML = `😢`
+        } else if (humor == 'Bravo') {
+            p_mensagem.innerHTML = `😡`
+        } else if (humor == 'Surpreso') {
+            p_mensagem.innerHTML = `😲`
+        } else if (humor == 'Cansado') {
+            p_mensagem.innerHTML = `😴`
+        } else {
+            alert(`Resposta inválida. Como você está se sentindo?`)
+        }
+}
+</script>

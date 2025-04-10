@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Média</title>
+</head>
+<body>
+    
+    <h3>Qual seu nome?</h3>
+    <input id="input_nome" type="text">
+
+    <h3>Informe sua nota na avaliação continuada</h3>
+    <input id="input_notaContinuada" type="text">
+
+    <h3>Informe sua nota na avaliação semestral</h3>
+    <input id="input_notaSemestral" type="text">
+
+    <br><br>
+
+    <button onclick="calculoMedia()">Calcule sua média</button>
+</body>
+</html>
+
+<script>
+
+    function calculoMedia() {
+
+        var notaContinuada = Number(input_notaContinuada.value);
+        var notaSemestral = Number(input_notaSemestral.value);
+        var media = (notaContinuada * 0.4) + (notaSemestral * 0.6);
+
+        var nome = input_nome.value;
+
+        alert('A média de ' + nome + ' será de ' + media + '.')
+
+    }
+
+</script>

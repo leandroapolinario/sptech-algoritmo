@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <h3>Informe o primeiro número</h3>
+    <input id="input_n1" type="text">
+
+    <h3>Informe o segundo número</h3>
+    <input id="input_n2" type="text">
+
+    <br><br>
+
+    <button onclick="Somar()">Somar</button>
+    <button onclick="Subtrair()">Subtrair</button>
+    <button onclick="Multiplicar()">Multiplicar</button>
+    <button onclick="Dividir()">Dividir</button>
+
+    
+</body>
+</html>
+
+<script>
+
+    function Somar() {
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value)
+        var soma = n1 + n2;
+
+        alert('A soma entre ' + n1 + ' e ' + n2 + ' é ' + soma + '.');
+
+    }
+
+    function Subtrair() {
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value)
+        var subtracao = n1 - n2;
+
+        alert('A diferença entre ' + n1 + ' e ' + n2 + ' é ' + subtracao + '.');
+
+    }
+
+    function Multiplicar() {
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value)
+        var multiplicacao = n1 * n2;
+
+        alert('O produto entre ' + n1 + ' e ' + n2 + ' é ' + multiplicacao + '.');
+
+    }
+
+    function Dividir() {
+
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value)
+        var divisao = n1 / n2;
+
+        alert('A razão entre ' + n1 + ' e ' + n2 + ' é ' + divisao + '.');
+
+}
+
+
+
+// ctrl shift alt
+
+</script>
+
+

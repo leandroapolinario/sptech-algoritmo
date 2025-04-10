@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+</head>
+<body>
+
+    <p>Quantos homens entraram no elevador?</p>
+    <input type="number" id="input_homens">
+    <br><br>
+    <p>Quantas mulheres entraram no elevador?</p>
+    <input type="number" id="input_mulheres">
+    <br><br>
+    <button onclick="elevador()">Ligar elevador</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+    function elevador() {
+        var qtdHomens = Number(input_homens.value);
+        var qtdMulheres = Number(input_mulheres.value);
+
+        var pesoTotal = (qtdHomens * 90) + (qtdMulheres * 70);
+        
+
+        if(pesoTotal < 500) {
+            p_mensagem.innerHTML = `<i style = "color: green"> Elevador vai se mover, pois está com ${pesoTotal}kg </i>`
+        } else {
+            var pesoExtra = pesoTotal - 500;
+
+            p_mensagem.innerHTML = `<b style = "color: red"> Alguém precisa descer. Precisa perder ${pesoExtra}kg para mover o elevador </b>`
+        }
+    }
+</script>

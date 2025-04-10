@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renda</title>
+</head>
+<body>
+    Qual sua renda?
+    <input type="number" id="input_renda">
+    <br><br>
+    Qual a renda total da sua família?
+    <input type="number" id="input_rendaFamilia">
+    <br><br>
+    <button onclick="renda()">Terei o benefício</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function renda() {
+        var renda = Number(input_renda.value);
+        var rendaFamilia = Number(input_rendaFamilia.value);
+
+
+        if (renda <= 2000 || rendaFamilia <= 3000) {
+            p_mensagem.innerHTML = `Você terá direito ao auxílio!`
+        } else {
+            p_mensagem.innerHTML = `Sem direito ao auxílio`
+        }
+    }
+</script>

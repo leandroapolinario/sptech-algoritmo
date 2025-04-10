@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo</title>
+</head>
+<body>
+
+
+    <h3>Atualizar saldo</h3>
+    <h4 id="h4Saldo"></h4>
+
+    <br><br>
+
+    <input type="number" id="input_valor">
+
+    <br><br>
+
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="retirar()">Sacar</button>
+    
+
+</body>
+</html>
+
+<script>
+
+    var saldo = 0;
+
+
+    function depositar() {
+
+        var valor = Number(input_valor.value);
+
+        saldo = saldo + valor;
+
+        h4Saldo.innerHTML = `Depósito de R$${valor} efetuado! Saldo atual: R$${saldo}`;
+
+    }
+
+    function retirar() {
+
+        var valor = Number(input_valor.value);
+
+        saldo = saldo - valor;
+
+        h4Saldo.innerHTML = `Saque de R$${valor} efetuado! Saldo atual: R$${saldo}`;
+
+}
+
+</script>

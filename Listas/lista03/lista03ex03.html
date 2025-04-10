@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Bilhete Único</title>
+</head>
+<body>
+    
+    <h3>Qual o valor da passagem?</h3>
+    <input id="input_valorPassagem" type="text">
+
+    <h3>Quantas viagens você fará por mês?</h3>
+    <input id="input_viagensMes" type="text">
+
+    <br><br>
+
+    <button onclick="calculoBilheteUnico()">Ver economia</button>
+
+</body>
+</html>
+
+<script>
+
+    function calculoBilheteUnico() {
+
+        var valorPassagem = Number(input_valorPassagem.value);
+        var viagensMes = Number(input_viagensMes.value);
+        var desconto = valorPassagem/2;
+        var totalDesconto = (valorPassagem*viagensMes) - (desconto * viagensMes);
+
+        alert('Você economizará R$' + totalDesconto + ' por mês!');
+
+
+    }
+
+</script>

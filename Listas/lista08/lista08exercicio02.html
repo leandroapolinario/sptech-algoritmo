@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        img {
+
+            height: 500px;
+            width: auto;
+
+        }
+    </style>
+
+    <title>Preferência de compra</title>
+</head>
+<body>
+
+    <p>Qual o tamanho da tela do celular? (em polegadas)</p>
+    <input type="number" id="input_tamanhoTela">
+    <p>Qual a cor do celular?</p>
+    <select id="select_cor">
+
+        <option>Preto</option>
+        <option>Prata</option>
+        <option>Azul</option>
+        <option>Vermelho</option>
+
+    </select><br><br>
+
+    <button onclick="preferencia()">Será que ele gosta?</button><br><br>
+
+    <div id="p_mensagem"></div>
+    
+</body>
+</html>
+<script>
+
+    function preferencia() {
+        var tamanhoTela = Number(input_tamanhoTela.value);
+        var cor = select_cor.value;
+
+        if(tamanhoTela > 6.5 && (cor == 'Preto' || cor == 'Prata')) {
+            p_mensagem.innerHTML = `<img src="https://www.elhombre.com.br/wp-content/uploads/2023/12/relaxing-scaled-1.jpeg">`
+        } else {
+            p_mensagem.innerHTML = `<img src="https://st4.depositphotos.com/23223598/29631/i/450/depositphotos_296310612-stock-photo-upset-man-white-shirt-facepalm.jpg">`
+
+        }
+    }
+
+</script>

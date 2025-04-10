@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Ki</title>
+</head>
+<body>
+
+    <h3>Qual seu nome?</h3>
+    <input id="input_nome" type="text">
+
+    <h3>Qual seu ki?</h3>
+    <input id="input_ki" type="text">
+
+    <br><br>
+
+    <button onclick="calculoKi()">Ver ki em cada forma</button>
+    
+</body>
+</html>
+
+<script>
+
+    function calculoKi() {
+
+        var nome = input_nome.value;
+        var ki = input_ki.value;
+        var kiSaya1 = ki * 50;
+        var kiSaya2 = ki * 100;
+
+        alert('O guerreiro ' + nome + ' tem ' + kiSaya1 + ' de ki em sua forma Sayajin 1.');
+
+        alert('O guerreiro ' + nome + ' tem ' + kiSaya2 + ' de ki em sua forma Sayajin 2.');
+
+    }
+
+</script>

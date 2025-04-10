@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de cansaço do aluno SPTech</title>
+</head>
+<body>
+
+    <p>Qual o nome da empresa?</p>
+    <input type="text" id="input_nome">
+    <br><br>
+    <p>Qual o valor da bolsa de estágio?</p>
+    <input type="text" id="input_bolsaEstagio">
+    <br><br>
+    <p>Qual o VR da empresa?</p>
+    <input type="text" id="input_vr">
+    <br><br>
+    <p>Qual o tempo de deslocamento?</p>
+    <input type="text" id="input_deslocamento">
+    <br><br>
+    <button onclick="estagio()">É preferida?</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function estagio() {
+
+        var nome = input_nome.value;
+        var bolsaEstagio = input_bolsaEstagio.value;
+        var vr = input_vr.value;
+        var deslocamento = input_deslocamento.value;
+
+
+        if (bolsaEstagio >= 1800 || vr >= 20 || deslocamento <= 30) {
+            p_mensagem.innerHTML = `A empresa ${nome} é uma de suas preferências.`;
+        } else {
+            p_mensagem.innerHTML = `A empresa ${nome} está fora da sua lista.`;
+        }
+
+    }
+</script>

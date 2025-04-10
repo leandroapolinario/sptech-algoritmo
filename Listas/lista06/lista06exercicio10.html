@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrô - Cartão Fidelidade</title>
+</head>
+<body>
+    Quantas passagens você quer adquirir?
+    <input type="text" id="input_qtdPassagens">
+    <br><br>
+    <button onclick="metro()">Comprar</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function metro() {
+
+        var qtdPassagens = Number(input_qtdPassagens.value);
+        var valorPassagem = 4.4;
+        var valorTotal = 0;
+
+        if (qtdPassagens >= 8 && qtdPassagens <= 50) {
+            
+            if (qtdPassagens >= 8 && qtdPassagens <= 19) {
+                valorPassagem = valorPassagem * 0.97;
+            }
+             else if (qtdPassagens >= 20 && qtdPassagens <= 49) {
+                valorPassagem = valorPassagem * 0.95;
+            } else {
+                valorPassagem = valorPassagem * 0.93;
+            }
+
+            valorTotal = valorPassagem * qtdPassagens;
+            p_mensagem.innerHTML = `Total a pagar: R$${valorTotal}`
+
+        } else {
+            alert(`Quantidade inválida para o Fidelidade!`)
+        }
+
+    }
+</script>

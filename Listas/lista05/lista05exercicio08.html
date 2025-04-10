@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia</title>
+</head>
+<body>
+
+    <p>Qual sua meta de economia?</p>
+    <input type="number" id="input_meta"><br><br>
+
+    <p>Quanto você tem guardado?</p>
+    <input type="number" id="input_atual"><br><br>
+
+    <button onclick="economia()">Analisar economia</button><br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+    function economia() {
+        var meta = Number(input_meta.value);
+        var atual = Number(input_atual.value);
+
+        var diferença = 0;
+
+
+        if (meta == atual) {
+            p_mensagem.innerHTML = `Parabéns, meta alcançada!`
+        } else if (atual > meta) {
+            var diferença = atual - meta;
+            p_mensagem.innerHTML = `Meta ultrapassada em ${diferença}!`
+        } else {
+            var diferença = meta - atual;
+            p_mensagem.innerHTML = `Força! Ainda em busca da meta! Falta ${diferença}!`
+        }
+    }
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+
+    <h2>Tabuada</h2>    
+    <h3>Informe um número para ver sua tabuada:</h3>
+    <br>
+    <input type="number" id="input_numTabuada">
+    <br><br>    
+    <button onclick="tabuada()">Ver tabuada</button>
+    <br>
+    <h4 id="h4Resultado"></h4>
+
+</body>
+
+</html>
+
+<script>
+
+    function tabuada() {
+
+        n1 = input_numTabuada.value;
+
+        h4Resultado.innerHTML =
+
+        `${n1} x 0 = ${n1 * 0}
+        <br><br>
+        ${n1} x 0 = ${n1 * 1}
+        <br><br>
+        ${n1} x 0 = ${n1 * 2}
+        <br><br>
+        ${n1} x 0 = ${n1 * 3}
+        <br><br>
+        ${n1} x 0 = ${n1 * 4}
+        <br><br>
+        ${n1} x 0 = ${n1 * 5}
+        <br><br>
+        ${n1} x 0 = ${n1 * 6}
+        <br><br>
+        ${n1} x 0 = ${n1 * 7}
+        <br><br>
+        ${n1} x 0 = ${n1 * 8}
+        <br><br>
+        ${n1} x 0 = ${n1 * 9}
+        <br><br>
+        ${n1} x 0 = ${n1 * 10}
+        <br><br>`
+
+
+    }
+
+</script>

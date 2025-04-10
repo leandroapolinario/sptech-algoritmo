@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao banco</title>
+</head>
+<body>
+
+    <p>Qual o login?</p>
+    <input type="text" id="input_login">
+    <br><br>
+    <p>Qual a senha?</p>
+    <input type="password" id="input_senha">
+    <br><br>
+    <p>Informação pessoal</p>
+    <input type="text" id="input_infoPessoal">
+    <br><br>
+    <button onclick="autenticar()">Autenticar</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    
+</body>
+</html>
+<script>
+
+    function autenticar() {
+        
+        var login = input_login.value;
+        var senha = input_senha.value;       
+        var infoPessoal = input_infoPessoal.value;
+
+        if (login == 'ana' && senha == 'braga' && (infoPessoal == '1949' || infoPessoal == 'louro josé')) {
+
+            p_mensagem.innerHTML = `Usuário autenticado`;
+
+        } else {
+            p_mensagem.innerHTML = `Falha na autenticação`;
+        }
+
+    }
+
+</script>
