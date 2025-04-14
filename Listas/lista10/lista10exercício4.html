@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Coca-Colas</title>
+</head>
+<body>
+
+    Informe quantas Cocas-Colas você já bebeu na sua vida
+    <br><input type="text" id="input_coquinha"><br>
+
+    <button onclick="contar()">Ver a quantidade</button>
+    
+
+<div id="div_mensagem"></div>
+
+
+
+</body>
+</html>
+
+<script>
+    function contar(){
+
+        var cocas = Number(input_coquinha.value);
+
+        div_mensagem.innerHTML = ""
+
+        if (cocas >= 1){
+
+
+        for (contador = 1; contador <= cocas; contador++){
+
+            div_mensagem.innerHTML += `<img style="width: 42px ; height: 42px" src="https://carrefourbrfood.vtexassets.com/arquivos/ids/18904689/coca-cola-perfeita-250ml-1.jpg" alt=""> `
+
+
+        }
+    } else {
+        div_mensagem.innerHTML = `Vai beber coca!`
+    }
+
+
+
+    }
+
+
+
+
+</script>

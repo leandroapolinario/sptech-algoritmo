@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+
+
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+
+
+<script>
+   
+       
+        div_mensagem.innerHTML = "";
+
+
+        for(var contador = 1; contador <= 100; contador++){
+
+        if (contador % 5 == 0 && contador % 3 == 0){
+
+            div_mensagem.innerHTML += `FizzBuzz<br>`
+
+
+}        else if(contador % 3 == 0){
+
+            div_mensagem.innerHTML += `Fizz<br>`
+
+        } else if(contador % 5 == 0){
+
+            div_mensagem.innerHTML += `Buzz<br>`
+        } else {
+            div_mensagem.innerHTML += `${contador}<br>`
+        } 
+    }
+
+
+    
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bônus Bancário Inteligente</title>
+</head>
+<body>
+
+    Insira quantos depósitos você fez no banco
+    <br><input type="text" id="input_qtsdepositos"><br>
+
+    Insira o valor de cada depósito
+    <br><input type="text" id="input_vlrdeposito"><br>
+
+    <button onclick="somar()">Acompanhar grana</button>
+
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function somar () {
+
+        var quantosDepositos = Number(input_qtsdepositos.value);
+        var valorDepositos = Number(input_vlrdeposito.value);
+        var total = 0;
+       
+
+        div_mensagem.innerHTML = "";
+
+
+        for (contador = 1; contador <= quantosDepositos; contador++){
+
+            total += valorDepositos;
+
+
+            if (contador % 3 == 0){
+
+                total += total*0.01;
+
+            } 
+
+            div_mensagem.innerHTML += `${contador}º Mês: R$ ${total} <br><br>`;
+
+
+        }
+
+        div_mensagem.innerHTML += `Total guardado: R$${total}`;
+
+
+
+
+
+    }
+
+
+
+
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacidade Flexíve</title>
+</head>
+
+<body>
+
+    Quantas pessoas vão entrar no carro?
+    <br><input type="number" id="input_pessoas"><br>
+    <br>
+    Qual a capacidade de passageiros que o veículo suporta?
+    <br><input type="text" id="input_capacidade"><br>
+    <br><button onclick="contar()">#Partiu Carona</button><br>
+    <p id="p_mensagem"></p>
+
+</body>
+
+</html>
+<script>
+
+    function contar() {
+
+        var capacidade = Number(input_capacidade.value);
+        var pessoas = Number(input_pessoas.value);
+        p_mensagem.innerHTML = "";        
+
+        for (var contador = 1; contador <= pessoas; contador++) {
+
+            if (contador == 1) {
+
+                p_mensagem.innerHTML += `Entrou o ${contador}º passageiro (que é o(a) motorista)<br>`
+
+              } else if (contador <= capacidade) {
+
+                    p_mensagem.innerHTML += `Entrou o ${contador}º passageiro<br>`
+                }
+
+         else {
+
+                p_mensagem.innerHTML += `O ${contador}º passageiro terá que esperar!<br>`
+
+            }
+            
+        }
+    }
+
+</script>

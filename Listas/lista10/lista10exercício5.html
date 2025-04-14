@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café com Leite na Medida Certa</title>
+</head>
+<body>
+
+
+    informe quantas xícaras de café com leite você já tomou na vida
+    <br><input type="text" id="input_xicaras"><br>
+
+    <button onclick="contar()">Ver a quantidade</button>
+
+    <div id="div_mensagem"></div>
+
+ 
+</body>
+</html>
+
+<script>
+    function contar(){
+        var xicaras = Number(input_xicaras.value);
+
+        var leite = xicaras;
+        var cafe = 2 * xicaras;
+
+        div_mensagem.innerHTML = ""
+
+
+        for (contador = 1; contador <= leite; contador++){
+
+            div_mensagem.innerHTML += `<img style="width: 42px ; height: 42px" src="https://minhasaude.proteste.org.br/wp-content/uploads/2023/06/colher-carregando-punhado-de-leite-em-po-sobre-fundo-branco.jpg" alt=""> `
+
+
+
+
+
+        }
+
+        for (contador = 1; contador <= cafe; contador++){
+
+            div_mensagem.innerHTML += `<img style="width: 42px ; height: 42px" src="https://png.pngtree.com/png-clipart/20240309/original/pngtree-instant-coffee-powder-in-a-spoon-png-image_14548133.png" alt="">`
+        }
+
+    }
+
+    
+
+
+
+
+
+
+</script>
