@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Min<br>
+    <input type="text" id="input_min"><br>
+    Max<br>
+    <input type="text" id="input_max"><br>
+<br>
+    <button onclick="gerar()">Gerar</button>
+
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function gerar(){
+            var mensagem = "";
+            var aleatorio = Math.random();
+            var aleatorio_ate_10 = aleatorio * 10;
+            var intervalo = max - min;
+
+            var aleatorio_ate_max = aleatorio * max;
+
+            var min = Number(input_min.value);
+            var max = Number(input_max.value)
+
+
+            mensagem += `Número sorteado: ${aleatorio}`
+
+
+    }
+
+
+
+
+
+
+</script>
