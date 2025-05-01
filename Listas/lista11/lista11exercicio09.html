@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nota 2.0</title>
+</head>
+<body>
+    
+    <button onclick="notas()">Gerar uma nota de aluno entre 3 e 10</button>
+    <p id="p_mensagem1"></p>
+    <br>
+    <button onclick="frequencia()">Gerar uma frequência de aluno entre 50 e 100</button>
+    <p id="p_mensagem2"></p>
+    <br>
+    <button onclick="situacao()">Ver aprovação</button>
+    <br><br>
+    <p id="p_mensagem3"></p>
+
+</body>
+</html>
+<script>
+
+    var nota = 0;
+    var freq = 0;
+
+    function notas() {
+
+        var random1 = Math.random() * 7 + 3;
+
+        nota = random1.toFixed(1);
+    
+        p_mensagem1.innerHTML = `Nota: ${nota}`;
+
+    }
+
+    function frequencia() {
+
+        var random2 = Math.random() * 50 + 50;
+
+        freq = random2.toFixed(1);
+
+        p_mensagem2.innerHTML = `Frequência: ${freq}%`;
+
+    }
+
+    function situacao() {
+
+        if(nota >= 6 && freq >= 75) {
+    
+            var mensagem3 = `Com nota ${nota} e frequência ${freq}, o aluno está aprovado!`;
+                        
+        } else {
+
+            mensagem3 = `Com nota ${nota} e frequência ${freq}, o aluno está reprovado!`
+
+        }
+
+        p_mensagem3.innerHTML = mensagem3;
+
+    }   
+
+</script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo ken po</title>
+</head>
+<body>
+    
+    <button onclick="jogar()">Jogar</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+
+</body>
+</html>
+<script>
+
+        var vitJogador1 = 0
+        var vitJogador2 = 0
+
+    function jogar() {
+
+        var random = Math.random()
+        var mensagem = ""
+
+        var resultado = ""
+        
+        var imgPedra = `<img src="https://jogo-jokenpo.netlify.app/images/pedra.png" style="height:200px; width:200px">`
+        var imgPapel = `<img src="https://jogo-jokenpo.netlify.app/images/papel.png" style="height:200px; width:200px">`
+        var imgTesoura = `<img src="https://jogo-jokenpo.netlify.app/images/tesoura.png" style="height:200px; width:200px">`
+        var imgX = `<img src="https://images.vexels.com/media/users/3/155473/isolated/preview/faa3172dd52035d0c227d7ecab4d6024-x-cross-doodle.png" style="height:200px; width:200px">`
+
+        var imgjogador1 = ""
+        var imgJogador2 = ""
+
+        if (random <= 0.11) {
+
+            imgjogador1 = imgPedra 
+            imgJogador2 = imgPedra
+            resultado = "Empate!"
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.22) {
+
+            imgjogador1 = imgPedra 
+            imgJogador2 = imgPapel
+            resultado = "O jogador 2 venceu!"
+            vitJogador2 ++
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.33) {
+
+            imgjogador1 = imgPedra 
+            imgJogador2 = imgTesoura
+            resultado = "O jogador 1 venceu!"
+            vitJogador1++
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.44) {
+
+            imgjogador1 = imgPapel
+            imgJogador2 = imgPedra
+            resultado = "O jogador 1 venceu!"
+            vitJogador1++
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.55) {
+
+            imgjogador1 = imgPapel
+            imgJogador2 = imgPapel
+            resultado = "Empate!"
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.66) {
+
+            imgjogador1 = imgPapel
+            imgJogador2 = imgTesoura
+            resultado = "O jogador 2 venceu!"
+            vitJogador2 ++
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.77) {
+
+            imgjogador1 = imgTesoura
+            imgJogador2 = imgPedra
+            resultado = "O jogador 2 venceu!"
+            vitJogador2 ++
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else if (random <= 0.88) {
+
+            imgjogador1 = imgTesoura
+            imgJogador2 = imgPapel
+            resultado = "O jogador 1 venceu!"
+            vitJogador1++
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+
+        } else {
+
+            imgjogador1 = imgTesoura
+            imgJogador2 = imgTesoura
+            resultado = "Empate!"
+            mensagem = `${imgjogador1} ${imgX} ${imgJogador2} <br><br> ${resultado} <br><br> Jogador 1: ${vitJogador1} vitória(s) <br><br> Jogador 2: ${vitJogador2} vitória(s)`
+
+        }
+
+        p_mensagem.innerHTML = mensagem
+
+    }
+
+</script>

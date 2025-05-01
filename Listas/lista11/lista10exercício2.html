@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie um programa o qual:</title>
+</head>
+<body>
+
+    
+<button onclick="sortear()">Sortear Time</button>
+<div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function sortear(){
+    var mensagem = "";
+    var aleatoria = Math.random();
+    var aleatorioFinal = aleatoria * 1000
+
+
+    if (aleatorioFinal <= 250){
+         mensagem = `<img style: height="150px" src="https://images.seeklogo.com/logo-png/12/1/sao-paulo-futebol-clube-logo-png_seeklogo-122586.png" alt="">`
+
+    } else if(aleatorioFinal <= 500){
+        mensagem = `<img style: height="150px" src="https://lncimg.lance.com.br/cdn-cgi/image/width=1280,height=720,quality=75,fit=cover,format=webp/uploads/2024/09/escudo-palmeiras-aspect-ratio-512-320.jpg" alt="">`
+    } else if (aleatorioFinal > 501 && aleatorioFinal <= 750){
+        mensagem = `<img style: height="150px" src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png" alt="">`
+    } else {
+        mensagem = `<img style: height="150px" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png" alt="">`
+    }
+
+    div_mensagem.innerHTML = mensagem;
+
+    }
+
+
+
+
+
+</script>

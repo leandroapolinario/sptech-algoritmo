@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado</title>
+</head>
+<body>
+    <button onclick="dado()">Jogar dado</button><br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+
+    function dado() {
+
+        var random = parseInt(Math.random() * 21)
+        var mensagem = `<div style="display: flex; height: 100px; width: 100px; align-items: center; justify-content: center; background-color: black; color: white; font-size: 50px; font-weight: bold">D${random}</div>`
+
+        div_mensagem.innerHTML = mensagem;
+    }
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento do dia</title>
+</head>
+<body>
+
+    <button onclick="sortear()">Sortear momento do dia</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+
+    function sortear() {
+
+        var random = parseInt(Math.random() * 24)
+        var mensagem = ""
+
+        if(random <= 11) {
+
+            mensagem = `Horário: ${random}h<br><br>Bom dia, flor do dia, são ${random}h!`
+
+        } else if(random <= 17) {
+
+            mensagem = `Horário: ${random}h<br><br>Boa tarde, já vai tarde! São ${random}h!`
+
+        } else {
+
+            mensagem = `Horário: ${random}h<br><br>Boa noite, durma bem! São ${random}h!`
+
+        }
+
+        p_mensagem.innerHTML = mensagem
+
+    }
+
+</script>

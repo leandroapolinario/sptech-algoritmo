@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número cabalístico</title>
+</head>
+<body>
+    
+    <button onclick="sortear()">Quero um número cabalístico!</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+
+</body>
+</html>
+<script>
+
+    function sortear() {
+
+        var random = parseInt(Math.random() * 15 + 1)
+        var mensagem = ""
+
+        if(random == 3 || random == 4 || random == 7 || random == 10 || random == 12) {
+
+            mensagem = `Número sorteado: ${random}<br><br>Eu S2 números cabalísticos!`
+
+        } else {
+
+            mensagem = `Número sorteado: ${random}<br><br>Ah, me dá um número bom na próxima!`
+
+        }
+
+        p_mensagem.innerHTML = mensagem
+
+    }
+
+</script>
