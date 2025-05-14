@@ -21,32 +21,32 @@
 </body>
 </html>
 <script>
-    var produtos = []
+    var nomes = [];
+    var precosCompra = [];
+    var precosVenda = [];
+
     function cadastrar(){
-        var produto = {
-            nome: `${input_nome.value}`,
-            precoCompra: `${Number(input_preco.value)}`,
-            precoVenda: `${Number(input_preco.value) * 1.25}`
-        };
+        var nome = input_nome.value;
+        var preco = Number(input_preco.value);
+        var venda = preco * 1.25;
 
-        produtos.push(produto);
+        nomes.push(nome);
+        precosCompra.push(preco);
+        precosVenda.push(venda);
 
-        p_mensagem.innerHTML = `Produto cadastrado com sucesso!`
+        p_mensagem.innerHTML = `Produto cadastrado com sucesso!`;
     }
+
     function relatorio(){
-        
-        var totalProdutos = produtos.length;
+        var totalProdutos = nomes.length;
 
-        var mensagem = `Total de produtos: ${totalProdutos}<br><br>`
+        var mensagem = `Total de produtos: ${totalProdutos}<br><br>`;
 
-
-        for(i = 0; i < produtos.length; i++){
-            mensagem += `Produto ${i + 1}: ${produtos[i].nome}<br><br>
-
-                        Preço de compra: R$${produtos[i].precoCompra}. Vender por R$${produtos[i].precoVenda}<br><br>`
+        for(var i = 0; i < totalProdutos; i++){
+            mensagem += `Produto ${i + 1}: ${nomes[i]}<br><br>
+                         Preço de compra: R$${precosCompra[i]}. Vender por R$${precosVenda[i]}<br><br>`;
         }
 
         p_mensagem2.innerHTML = mensagem;
-
     }
 </script>
