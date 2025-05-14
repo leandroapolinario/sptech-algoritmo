@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanha de time de futebol</title>
+</head>
+<body>
+    <h2>Campanha do Time</h2>
+    <select id="select_resultado">
+        <option>Vitória</option>
+        <option>Empate</option>
+        <option>Derrota</option>
+    </select>
+    <br><br>
+    <button onclick="registrar()">Registrar</button>
+    <br>
+    <p></p>
+    <input type="text" id="input_jogo" placeholder="Pesquise um jogo" oninput="jogo()">
+    <p id="p_mensagem"></p>
+    <p id="p_mensagem2"></p>
+</body>
+</html>
+<script>
+//explorando vetores
+    var campanha = [];
+    var vit = [];
+    var emp = [];
+    var der = [];
+
+    function registrar(){
+        var resultado = select_resultado.value;
+
+        campanha.push(resultado);
+
+        if(resultado == "Vitória"){
+            vit.push(3);
+        } else if(resultado == "Empate"){
+            emp.push(1);
+        } else {
+            der.push(0);
+        }
+
+        var vitorias = vit.length;
+        var empates = emp.length;
+        var derrotas = der.length;
+
+        var vitPontos = vit.length * 3;
+        var empPontos = emp.length * 1;
+
+        var totalPontos = vitPontos + empPontos;
+        var totalPontosPossiveis = campanha.length * 3;
+
+        var aproveitamento = (totalPontos / totalPontosPossiveis) * 100;
+
+        p_mensagem.innerHTML = `O time teve: ${vitorias} vitórias, ${empates} empates, ${derrotas} derrotas  
+                                <br>
+                                Pontuação total: ${totalPontos} pontos  
+                                <br>
+                                Aproveitamento: ${aproveitamento.toFixed(2)}%`
+
+    }
+
+    function jogo(){
+        var jogoSelecionado = Number(input_jogo.value);
+        var numJogo = jogoSelecionado - 1;
+
+        if(campanha[numJogo] == 'Vitória'){
+            p_mensagem2.innerHTML = `No ${jogoSelecionado}º jogo, o time ganhou!`
+        } else if (campanha[numJogo] == 'Empate') {
+            p_mensagem2.innerHTML = `No ${jogoSelecionado}º jogo, o time empatou!`
+        } else if (campanha[numJogo] == 'Derrota') {
+            p_mensagem2.innerHTML = `No ${jogoSelecionado}º jogo, o time perdeu!`
+         } else {
+            p_mensagem2.innerHTML = `Não foi cadastrado um ${jogoSelecionado}º jogo`
+         }
+    }
+</script>

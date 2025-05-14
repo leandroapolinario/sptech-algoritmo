@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema avançado de estoque</title>
+</head>
+<body>
+    <p>Nome do produto</p>
+    <input type="text" id="input_nome">
+    <p>Preço de compra</p>
+    <input type="number" id="input_preco">
+    <br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br><br>
+    <button onclick="relatorio()">Relatório de estoque</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    <br><br>
+    <p id="p_mensagem2"></p>
+    <br><br>
+    <p id="p_mensagem3"></p>
+</body>
+</html>
+<script>
+
+    var produtos = []
+
+    function cadastrar(){
+        var produto = {
+            nome: `${input_nome.value}`,
+            precoCompra: `${input_preco.value}`,
+            precoVenda: `${Number(input_preco.value) * 1.25}`
+        };
+
+        produtos.push(produto);
+
+        p_mensagem.innerHTML = `Produto cadastrado com sucesso! Produtos cadastrados: ${produtos.length}`;
+    }
+    function relatorio(){
+
+        var totalProdutos = produtos.length;
+        var mensagem2 = `Total de produtos: ${totalProdutos}<br><br>`;
+
+        if(totalProdutos > 0){
+
+            var soma = 0;
+            var somaPrecoVenda = 0;
+            var mediaPrecoVenda = 0;
+            var precoMax = 0;
+            var precoMin = Number(produtos[0].precoCompra);
+            var produtoPrecoMax = "";
+            var produtoPrecoMin = `${produtos[0].nome}`;
+            var mensagem3 = "";        
+        
+            for(i = 0; i < produtos.length; i++){
+
+                mensagem2 += `Produto ${i + 1}: ${produtos[i].nome}<br><br>
+
+                Preço de compra: R$${produtos[i].precoCompra}. Vender por R$${produtos[i].precoVenda}<br><br>`;
+
+                soma += Number(produtos[i].precoCompra);
+                somaPrecoVenda += Number(produtos[i].precoVenda);
+
+                if(Number(produtos[i].precoCompra) > Number(precoMax)){
+                    precoMax = produtos[i].precoCompra;
+                    produtoPrecoMax = produtos[i].nome;
+                }
+
+                if (Number(produtos[i].precoCompra) < Number(precoMin)){ 
+                    precoMin = produtos[i].precoCompra;
+                    produtoPrecoMin = produtos[i].nome;
+                }
+            }
+
+            mediaPrecoVenda = somaPrecoVenda / totalProdutos;
+
+            mensagem3 = `Produto mais caro: ${produtoPrecoMax} (R$${precoMax})
+            <br><br>
+            Produto mais barato: ${produtoPrecoMin} (R$${precoMin})
+            <br><br>
+            Soma dos preços de compra: R$${soma}
+            <br><br>
+            Média dos preços de venda: R$${mediaPrecoVenda.toFixed(2)}`
+
+            p_mensagem2.innerHTML = mensagem2;
+            p_mensagem3.innerHTML = mensagem3;
+        
+    } else {
+
+        p_mensagem2.innerHTML = `Sem produtos cadastrados. Cadastre produtos para receber o relatório de estoque.`
+
+    }
+    }
+</script>

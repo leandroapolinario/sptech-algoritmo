@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de números</title>
+</head>
+<body>
+    <p>Digite um número qualquer</p>
+    <input type="number" id="input_num">
+    <br><br>
+    <button onclick="analisar()">Analisar histórico</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    var lista = []
+
+    function analisar() {
+        var numero = Number(input_num.value);
+
+        lista.push(numero);
+
+        var num1 = 0;
+        var num2 = 0;
+        var num3 = 0;
+        var num4 = 0;
+        var max = numero;
+        var min = numero;
+
+        if (lista[0] != undefined) {
+            num1 = lista[0]
+        } else {
+            num1 = "Não cadastrado";
+        }
+        if (lista[1] != undefined) {
+            num2 = lista[1]
+        } else {
+            num2 = "Não cadastrado";
+        }
+        if (lista[2] != undefined) {
+            num3 = lista[2]
+        } else {
+            num3 = "Não cadastrado";
+        }
+        if (lista[3] != undefined) {
+            num4 = lista[3]
+        } else {
+            num4 = "Não cadastrado";
+        }
+
+        for (var i = 0; i < lista.length; i++){
+            if(lista[i] > max){
+                max = lista[i]
+            }
+        }
+
+        for (var i = 0; i < lista.length; i++){
+            if(lista[i] < min){
+                min = lista[i]
+            }
+        }
+
+        p_mensagem.innerHTML = `1º Número: ${num1}  
+                                <br>
+                                2º Número: ${num2}  
+                                <br>
+                                3º Número: ${num3}  
+                                <br>
+                                4º Número: ${num4}  
+                                <br>
+                                Maior: ${max}  
+                                <br>
+                                Menor: ${min}`
+        
+    }
+</script>

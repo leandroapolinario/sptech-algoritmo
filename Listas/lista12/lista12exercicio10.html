@@ -28,15 +28,14 @@
 
 
     function gravar(){
-        var linhas = input_linhas.value;
-        lista.push(linhas);
+        lista.push(input_linhas.value);
         mensagem = "";
 
         var i = lista.length;
 
-        for(i; i > 0; i--){
+        for(var i = lista.length -1; i > 0; i--){
 
-        mensagem += `${lista[i-1]}<br>`
+        mensagem += `${lista[i]}<br>`
 
         }
 

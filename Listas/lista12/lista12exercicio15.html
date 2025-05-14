@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+</head>
+<body>
+    <p>Nome do produto</p>
+    <input type="text" id="input_nome">
+    <p>Preço de compra</p>
+    <input type="number" id="input_preco">
+    <br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br><br>
+    <button onclick="relatorio()">Relatório de estoque</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+    <br><br>
+    <p id="p_mensagem2"></p>
+</body>
+</html>
+<script>
+    var produtos = []
+    function cadastrar(){
+        var produto = {
+            nome: `${input_nome.value}`,
+            precoCompra: `${Number(input_preco.value)}`,
+            precoVenda: `${Number(input_preco.value) * 1.25}`
+        };
+
+        produtos.push(produto);
+
+        p_mensagem.innerHTML = `Produto cadastrado com sucesso!`
+    }
+    function relatorio(){
+        
+        var totalProdutos = produtos.length;
+
+        var mensagem = `Total de produtos: ${totalProdutos}<br><br>`
+
+
+        for(i = 0; i < produtos.length; i++){
+            mensagem += `Produto ${i + 1}: ${produtos[i].nome}<br><br>
+
+                        Preço de compra: R$${produtos[i].precoCompra}. Vender por R$${produtos[i].precoVenda}<br><br>`
+        }
+
+        p_mensagem2.innerHTML = mensagem;
+
+    }
+</script>
