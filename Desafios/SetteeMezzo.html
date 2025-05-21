@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 e meio</title>
+</head>
+<body>
+    
+    <div id="div_botao">
+        <button onclick="jogar()">Jogar Sete e Meio</button>
+    </div>
+
+    </div>
+
+</body>
+</html>
+<script>
+    var cartasNomes = ["Ás", "2", "3", "4", "5", "6", "7", "Valete", "Rainha", "Rei"];
+    var naipe = ["Copas", "Espadas", "Ouros", "Paus"];
+    var valores = [1, 2, 3, 4, 5, 6, 7, 0.5, 0.5, 0.5];
+
+    var baralho = [];
+    var cartasJogador = [];
+    var cartasBanca = [];
+    var pontosJogador = 0;
+    var pontosBanca = 0;
+
+    function jogar(){
+    
+    div_botao.innerHTML = `<button onclick="valoresCartas()">Pedir Outra Carta</button> <button onclick="valoresBanca()">Passar Vez</button>`
+    valoresCartas()
+    }
+
+function valoresCartas(){
+
+
+    var cartasNomesJogador = parseInt(Math.random() * cartasNomes.length );
+    pontosJogador += valores[cartasNomesJogador];
+    var cartasNipeJogador = parseInt(Math.random() * naipe.length);
+
+ div_botao.innerHTML += `<br>(${pontosJogador} pontos) - ${cartasNomes[cartasNomesJogador]} de ${naipe[cartasNipeJogador]}`
+
+
+    if (pontosJogador == 7.5) {
+
+        div_botao.innerHTML += `SETE E MEIO! O jogador venceu com 7.5 pontos!`
+    }
+        else if (pontosJogador > 7.5){
+
+            div_botao.innerHTML += `<br>O JOGADOR ESTOUROU! A banca venceu com X pontos`
+    }
+        }
+
+
+
+
+
+
+
+
+
+</script>
